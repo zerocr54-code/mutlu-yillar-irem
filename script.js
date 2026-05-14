@@ -19,3 +19,8 @@ changeBackground();
 
 // 5000 milisaniye (5 saniye) aralıklarla fotoğrafı değiştir
 setInterval(changeBackground, 5000);
+
+document.addEventListener('click', function() {
+    const music = document.getElementById('bg-music');
+    music.play();
+}, { once: true });
