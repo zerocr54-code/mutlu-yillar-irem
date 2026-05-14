@@ -1,6 +1,6 @@
 function checkPassword() {
     const password = document.getElementById('password-input').value;
-    const correctPassword = "şifre buraya"; // Buraya istediğin şifreyi yaz!
+    const correctPassword = "1550"; // Buraya istediğin şifreyi yaz!
 
     if (password === correctPassword) {
         // Şifre doğruysa: Giriş ekranını sil, ana içeriği göster ve müziği başlat
