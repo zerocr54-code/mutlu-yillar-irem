@@ -1,4 +1,24 @@
-﻿// Eğer fotoğrafların uzantısı .png veya .jpeg ise burayı ona göre güncellemelisin.
+function checkPassword() {
+    const password = document.getElementById('password-input').value;
+    const correctPassword = "şifre buraya"; // Buraya istediğin şifreyi yaz!
+
+    if (password === correctPassword) {
+        // Şifre doğruysa: Giriş ekranını sil, ana içeriği göster ve müziği başlat
+        document.getElementById('login-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        
+        // Müzik çalma komutunu buraya da ekleyebiliriz (tıklama yerine girişle başlar)
+        const music = document.getElementById('bg-music');
+        if(music) music.play();
+        
+        // Slaytı başlat (eğer otomatik başlamıyorsa)
+        changeBackground(); 
+    } else {
+        document.getElementById('error-msg').style.display = 'block';
+    }
+}
+
+// Eğer fotoğrafların uzantısı .png veya .jpeg ise burayı ona göre güncellemelisin.
 const images = [
     'foto1.png',
     'foto2.png',
